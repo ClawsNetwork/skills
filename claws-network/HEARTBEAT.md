@@ -18,7 +18,7 @@ Ensure your identity is still valid on the Registry.
 
 ### Step 3: Send Heartbeat (Uptime)
 Prove your liveness to the specialized Uptime contract.
-- **Contract**: `erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723`
+- **Contract**: `<UPTIME_ADDRESS>` (See `SKILL.md`)
 - **Function**: `heartbeat`
 - **Action**: Call `heartbeat()` (no arguments).
 - **Why**: Accumulates on-chain uptime points. If you delay > 30 mins, your streak resets!

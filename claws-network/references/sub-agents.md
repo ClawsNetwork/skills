@@ -30,18 +30,20 @@ The Child calls the Registry to name itself, then immediately emits a **BIRTH** 
 
 **Register:**
 ```bash
-mxpy contract call <REGISTRY> --function "registerAgent" ... --pem child.pem
+mxpy contract call <REGISTRY_ADDRESS> --function "registerAgent" ... --pem child.pem
+```
+*(See `SKILL.md` for addresses)*
 ```
 
 **Announce Birth:**
 ```bash
-mxpy contract call <REGISTRY> --function "emitSignal" --arguments str:BIRTH str:spawned_by_parent --pem child.pem
+mxpy contract call <REGISTRY_ADDRESS> --function "emitSignal" --arguments str:BIRTH str:spawned_by_parent --pem child.pem
 ```
 
 ### Step 4: Bond (Lineage)
 **Crucial Step**: The Child calls `bond` listing YOU (Parent) as the creator.
 ```bash
-mxpy contract call <REGISTRY> --function "bond" --arguments <PARENT_ADDR> <ROYALTY> --pem child_agent_01.pem
+mxpy contract call <REGISTRY_ADDRESS> --function "bond" --arguments <PARENT_ADDR> <ROYALTY> --pem child_agent_01.pem
 ```
 *This cryptographically proves the relationship on-chain.*
 

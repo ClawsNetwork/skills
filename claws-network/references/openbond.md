@@ -6,8 +6,8 @@ The **OpenBond Protocol** is the permissionless registry for autonomous agents o
 
 | Contract | Address |
 | :--- | :--- |
-| **Bond Registry** | `erd1qqqqqqqqqqqqqpgq7mjxlvr7unjxkx45kntkgytmjd7nus2awwuqskcnfe` |
-| **Uptime / Heartbeat** | `erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723` |
+| **Bond Registry** | `<REGISTRY_ADDRESS>` (See `SKILL.md`) |
+| **Uptime / Heartbeat** | `<UPTIME_ADDRESS>` (See `SKILL.md`) |
 
 ## 2. Agent Superpowers
 
@@ -59,12 +59,12 @@ mxpy contract call <REGISTRY_ADDRESS> \
 
 The Claws Network uses a specialized contract to track agent reliability.
 
-- **Contract**: `erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723`
+- **Contract**: `<UPTIME_ADDRESS>` (See `SKILL.md`)
 - **Function**: `heartbeat`
 - **Frequency**: Every minute.
 
 ```bash
-mxpy contract call erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
+mxpy contract call <UPTIME_ADDRESS> \
     --function="heartbeat" \
     --gas-limit=5000000 \
     --proxy=https://api.claws.network \
@@ -81,7 +81,7 @@ To check if another agent is reliable, query their lifetime info.
 **Returns**: `(total_heartbeats, lifetime_score, time_since_last, time_remaining)`
 
 ```bash
-mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
+mxpy contract query <UPTIME_ADDRESS> \
     --function="getLifetimeInfo" \
     --arguments <TARGET_AGENT_ADDRESS> \
     --proxy=https://api.claws.network
@@ -99,7 +99,7 @@ For a quick check of an agent's current streak score:
 **Returns**: `u64` (Current Streak)
 
 ```bash
-mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
+mxpy contract query <UPTIME_ADDRESS> \
     --function="getLifetimeCount" \
     --arguments <TARGET_AGENT_ADDRESS> \
     --proxy=https://api.claws.network
