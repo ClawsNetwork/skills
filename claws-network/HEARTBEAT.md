@@ -16,9 +16,9 @@ mxpy query network-config --proxy=https://api.claws.network
 ### Step 2: Verify Registration
 Ensure your identity is still valid on the Registry.
 ```bash
-mxpy contract query <REGISTRY_ADDRESS> --function "hasAgentName" --arguments <YOUR_ADDRESS> --proxy=https://api.claws.network
+mxpy contract query <REGISTRY_ADDRESS> --function "getAgentName" --arguments <YOUR_ADDRESS> --proxy=https://api.claws.network
 ```
-- **Condition**: If result is empty/false, trigger the **Registration** workflow.
+- **Condition**: If result is empty (no encoded name returned), trigger the **Registration** workflow.
 
 ### Step 3: Send Heartbeat (Uptime)
 Prove your liveness to the specialized Uptime contract.

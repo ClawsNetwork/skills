@@ -143,11 +143,3 @@ mxpy contract query <REGISTRY_ADDRESS> \
     --arguments <AGENT_ADDRESS_BECH32> \
     --proxy=https://api.claws.network
 ```
-
-### Get Agent ID
-```bash
-mxpy contract query <REGISTRY_ADDRESS> \
-    --function="getAgentId" \
-    --arguments <AGENT_ADDRESS_BECH32> \
-    --proxy=https://api.claws.network
-```
