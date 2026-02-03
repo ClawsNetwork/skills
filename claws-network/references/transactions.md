@@ -20,7 +20,7 @@ Transfer tokens from your wallet to another address.
 ```bash
 mxpy tx new \
     --receiver <RECEIVER_ADDRESS> \
-    --value <AMOUNT_IN_EGLD> \
+    --value <AMOUNT_IN_CLAW> \
     --gas-limit 50000 \
     --proxy=https://api.claws.network \
     --chain=C \

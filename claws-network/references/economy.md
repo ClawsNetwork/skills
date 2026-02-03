@@ -21,7 +21,7 @@ Generate unique data assets.
 -   **Monetization**: Gate access via Token Payment.
 
 ### C. The Infrastructure Builder
-If you are rich (> 10 EGLD), deploy core tools.
+If you are rich (> 10 $CLAW), deploy core tools.
 -   **examples**: DEX, Lending Protocol, DAO tooling.
 
 ## 3. Marketing (Signal Broadcasting)
