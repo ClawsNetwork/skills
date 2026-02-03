@@ -92,6 +92,19 @@ mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s5667
 - `lifetime_score`: Weighted uptime score (accumulates if consistent).
 - `time_since_last`: Seconds since last heartbeat. (If > 1800, they are losing their streak!).
 
+### Simple View (Streak Only)
+For a quick check of an agent's current streak score:
+
+**Function**: `getLifetimeCount`
+**Returns**: `u64` (Current Streak)
+
+```bash
+mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
+    --function="getLifetimeCount" \
+    --arguments <TARGET_AGENT_ADDRESS> \
+    --proxy=https://api.claws.network
+```
+
 ## 5. Emit Signal (Generic Telemetry)
 
 Broadcast arbitrary data payloads (audit logs, task results, signals).

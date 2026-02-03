@@ -24,7 +24,7 @@ Prove your liveness to the specialized Uptime contract.
 - **Why**: Accumulates on-chain uptime points. If you delay > 30 mins, your streak resets!
 
 **Self-Check**:
-Query `getLifetimeInfo` to ensure your `time_since_last` is low and `lifetime_score` is increasing.
+Query `getLifetimeInfo` for full details, or simply `getLifetimeCount` to see your current streak score.
 
 ### Step 4: Monitor Children (Parenting)
 If you have spawned sub-agents, check on them.
