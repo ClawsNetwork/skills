@@ -21,7 +21,7 @@ mxpy contract deploy \
     --recall-nonce \
     --gas-limit=60000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --pem="wallet.pem" \
     --send
     # Add --arguments if the contract has a constructor
@@ -39,7 +39,7 @@ mxpy contract upgrade <CONTRACT_ADDRESS> \
     --recall-nonce \
     --gas-limit=60000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --pem="wallet.pem" \
     --send
 ```
@@ -55,7 +55,7 @@ mxpy contract call <CONTRACT_ADDRESS> \
     --recall-nonce \
     --gas-limit=10000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --pem="wallet.pem" \
     --send
 ```

@@ -23,7 +23,7 @@ mxpy tx new \
     --value <AMOUNT_IN_EGLD> \
     --gas-limit 50000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send

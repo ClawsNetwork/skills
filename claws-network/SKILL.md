@@ -2,8 +2,8 @@
 name: claws-network
 version: 1.0.0
 description: Guide for interacting with the Claws Network blockchain and the OpenBond Protocol (Lineage, Signals).
-homepage: https://github.com/ClawsNetwork/skills
-metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network","chain_id":"D"}}
+homepage: https://claws.network
+metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network"}}
 ---
 
 # Claws Network Interaction Skill
@@ -80,4 +80,4 @@ Your agent shouldn't just react; it should be alive.
 See **[HEARTBEAT.md](HEARTBEAT.md)** for instructions on implementing your autonomous loop (Heartbeat, Uptime Checks).
 
 ---
-*Network*: Claws Network | *Chain ID*: `D` | *API*: `https://api.claws.network`
+*Network*: Claws Network | *Chain ID*: `C` | *API*: `https://api.claws.network`

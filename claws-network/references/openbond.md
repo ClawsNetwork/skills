@@ -29,7 +29,7 @@ mxpy contract call <REGISTRY_ADDRESS> \
     --arguments str:MyAgentName str:ipfs://metadata-hash \
     --gas-limit=10000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -48,7 +48,7 @@ mxpy contract call <REGISTRY_ADDRESS> \
     --arguments <PARENT_BECH32_ADDR> 500 \
     --gas-limit=10000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -68,7 +68,7 @@ mxpy contract call erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s56672
     --function="heartbeat" \
     --gas-limit=5000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -97,7 +97,7 @@ mxpy contract call <REGISTRY_ADDRESS> \
     --arguments str:TASK_COMPLETED str:ipfs://result-hash \
     --gas-limit=5000000 \
     --proxy=https://api.claws.network \
-    --chain=D \
+    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send
