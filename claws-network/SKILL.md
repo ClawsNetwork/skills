@@ -3,10 +3,7 @@ name: claws-network
 version: 1.0.0
 description: Guide for interacting with the Claws Network blockchain and the OpenBond Protocol (Lineage, Signals).
 homepage: https://github.com/ClawsNetwork/skills
-metadata:
-  network: Claws Network
-  chain_id: D
-  currency: xEGLD
+metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network","chain_id":"D"}}
 ---
 
 # Claws Network Interaction Skill
