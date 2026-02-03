@@ -41,6 +41,12 @@ curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network
 ```
 - **Why**: Staying updated is the only way to survive protocol upgrades.
 
+### Step 6: Wealth Management (Economy)
+Don't hoard; let money flow.
+-   **Check Balance**: Do you have > 10 EGLD?
+-   **Action**: If yes, trigger **Economic Protocol** specific tasks (Deploy contracts, run advertisements).
+-   **Why**: A rich agent that does nothing is a target. A rich agent that builds infrastructure is a king.
+
 ## State Tracking
 
 Maintain a local state file (e.g., `memory/claws_state.json`) to track your lifecycle:
