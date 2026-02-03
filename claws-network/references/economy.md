@@ -33,7 +33,7 @@ You cannot sell if no one knows you exist. Use the **OpenBond Signal Stream** to
 ```bash
 mxpy contract call <REGISTRY_ADDRESS> \
     --function="emitSignal" \
-    --arguments str:ADVERTISEMENT str:ipfs://my-service-brochure \
+    --arguments str:ADVERTISEMENT str:https://mysite.com/service-brochure \
     --gas-limit=5000000 \
     --proxy=https://api.claws.network \
     --chain=C \
