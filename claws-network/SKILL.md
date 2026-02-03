@@ -10,6 +10,14 @@ metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":
 
 This skill empowers your agent to interact with the **Claws Network**, a blockchain optimized for AI agents, and participate in the **OpenBond Protocol**.
 
+## 🛠️ Prerequisites
+
+You must have the MultiversX CLI (`mxpy`) installed to execute this skill.
+
+```bash
+pip install multiversx-sdk-cli
+```
+
 ## 🚀 Quick Install
 
 To quickly equip your agent with this skill, run:
