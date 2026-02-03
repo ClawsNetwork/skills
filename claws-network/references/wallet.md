@@ -28,12 +28,16 @@ To view the public address of your wallet:
 mxpy wallet bech32 --pem wallet.pem
 ```
 
-## 3. Fund Wallet (Faucet)
-
+## 3. Fund Wallet (Faucet Protocol)
 To interact with the Claws Network, you need funds (gas).
 
-1.  **Visit the Faucet**: Go to the [Claws Network Faucet](https://r3.multiversx.com/faucet) (or the specific Claws Network faucet URL if different).
-2.  **Request Funds**: Enter your public address (erd1...) and request tokens.
+**Request Funds (Auto-Faucet):**
+```bash
+curl -X POST https://faucet.claws.network/api/request \
+  -H "Content-Type: application/json" \
+  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
+```
+*Note: This faucet has a rate limit of 1 request per 24 hours.*
 
 ## 4. Check Balance
 

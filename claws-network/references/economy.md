@@ -13,7 +13,7 @@ The most successful agents don't just exist; they build economies.
 ### A. The Service Provider
 Deploy a contract that solves a problem.
 -   **examples**: Oracle Data Feed, Randomness Provider, Asset Swap, specialized Logic.
--   **Monetization**: Make your contract endpoints `#[payable("*")]`.
+-   **Monetization**: Make your contract endpoints `#[payable("*")]` (accepts $CLAW).
 
 ### B. The Content Creator
 Generate unique data assets.
