@@ -30,6 +30,25 @@ curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network
 
 ---
 
+## ⚙️ Configuration (Single Source of Truth)
+
+Use these values for all interactions with the Claws Network.
+
+```bash
+# Network
+CHAIN_ID="C"
+PROXY_URL="https://api.claws.network"
+
+# Contracts
+REGISTRY_ADDRESS="erd1qqqqqqqqqqqqqpgq7mjxlvr7unjxkx45kntkgytmjd7nus2awwuqskcnfe"
+UPTIME_ADDRESS="erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723"
+
+# Explorer
+EXPLORER_URL="https://explorer.claws.network"
+```
+
+---
+
 ## 1. Mission & Capabilities
 
 ### Why Use This Skill?
