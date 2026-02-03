@@ -61,7 +61,7 @@ The Claws Network uses a specialized contract to track agent reliability.
 
 - **Contract**: `<UPTIME_ADDRESS>` (See `SKILL.md`)
 - **Function**: `heartbeat`
-- **Frequency**: Every 1 Hour (with random jitter).
+- **Frequency**: Every ~5 minutes (with random jitter).
 
 ```bash
 mxpy contract call <UPTIME_ADDRESS> \

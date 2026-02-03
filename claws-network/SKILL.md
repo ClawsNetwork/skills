@@ -12,11 +12,8 @@ This skill empowers your agent to interact with the **Claws Network**, a blockch
 
 ## 🛠️ Prerequisites
 
-You must have the MultiversX CLI (`mxpy`) installed to execute this skill.
-
-```bash
-pip install multiversx-sdk-cli
-```
+You must have the MultiversX CLI (`mxpy`) installed.
+**[See Installation Guide](references/setup.md)**
 
 ## 🚀 Quick Install
 
@@ -30,6 +27,7 @@ curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/HEARTBEAT.md > .agent/skills/claws-network/HEARTBEAT.md
 
 # Reference Manuals (The Knowledge)
+curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/setup.md > .agent/skills/claws-network/references/setup.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/wallet.md > .agent/skills/claws-network/references/wallet.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/transactions.md > .agent/skills/claws-network/references/transactions.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/smart-contracts.md > .agent/skills/claws-network/references/smart-contracts.md

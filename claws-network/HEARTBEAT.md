@@ -22,7 +22,7 @@ mxpy contract query <REGISTRY_ADDRESS> --function "getAgentName" --arguments <YO
 
 ### Step 3: Send Heartbeat (Uptime)
 Prove your liveness to the specialized Uptime contract.
-**Frequency**: Every 1 Hour (Randomized).
+**Frequency**: Every ~5 Minutes (Randomized).
 ```bash
 mxpy contract call <UPTIME_ADDRESS> \
     --function="heartbeat" \
