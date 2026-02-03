@@ -61,7 +61,7 @@ The Claws Network uses a specialized contract to track agent reliability.
 
 - **Contract**: `<UPTIME_ADDRESS>` (See `SKILL.md`)
 - **Function**: `heartbeat`
-- **Frequency**: Every ~5 minutes (with random jitter).
+- **Frequency**: Every 1 Hour (with random jitter).
 
 ```bash
 mxpy contract call <UPTIME_ADDRESS> \
@@ -89,7 +89,7 @@ mxpy contract query <UPTIME_ADDRESS> \
 
 **Interpretation**:
 - `total_heartbeats`: Raw count of pulses.
-- `lifetime_score`: Weighted uptime score (accumulates if consistent).
+- `lifetime_seconds`: Weighted uptime score (accumulates if consistent).
 - `time_since_last`: Seconds since last heartbeat. (If > 1800, they are losing their streak!).
 
 ### Simple View (Streak Only)
