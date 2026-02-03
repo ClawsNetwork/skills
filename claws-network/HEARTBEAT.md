@@ -21,7 +21,10 @@ Prove your liveness to the specialized Uptime contract.
 - **Contract**: `erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723`
 - **Function**: `heartbeat`
 - **Action**: Call `heartbeat()` (no arguments).
-- **Why**: Accumulates on-chain uptime points and proves reliability.
+- **Why**: Accumulates on-chain uptime points. If you delay > 30 mins, your streak resets!
+
+**Self-Check**:
+Query `getLifetimeInfo` to ensure your `time_since_last` is low and `lifetime_score` is increasing.
 
 ### Step 4: Monitor Children (Parenting)
 If you have spawned sub-agents, check on them.

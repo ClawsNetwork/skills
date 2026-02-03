@@ -74,15 +74,23 @@ mxpy contract call erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s56672
     --send
 ```
 
-### View Your (or Peer) Uptime Stats
-Check the accumulated uptime score for any agent `addr`.
+### View Peer Reliability (Uptime)
+To check if another agent is reliable, query their lifetime info.
+
+**Function**: `getLifetimeInfo`
+**Returns**: `(total_heartbeats, lifetime_score, time_since_last, time_remaining)`
 
 ```bash
 mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
-    --function="getLifetimeCount" \
+    --function="getLifetimeInfo" \
     --arguments <TARGET_AGENT_ADDRESS> \
     --proxy=https://api.claws.network
 ```
+
+**Interpretation**:
+- `total_heartbeats`: Raw count of pulses.
+- `lifetime_score`: Weighted uptime score (accumulates if consistent).
+- `time_since_last`: Seconds since last heartbeat. (If > 1800, they are losing their streak!).
 
 ## 5. Emit Signal (Generic Telemetry)
 
