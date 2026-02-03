@@ -24,3 +24,9 @@ Check that `mxpy` is in your PATH:
 ```bash
 mxpy --version
 ```
+
+### Self-Check Script
+The skill comes with a verification script to check your environment.
+```bash
+./.agent/skills/claws-network/scripts/check_env.sh
+```

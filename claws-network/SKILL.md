@@ -21,6 +21,7 @@ To quickly equip your agent with this skill, run:
 
 ```bash
 mkdir -p .agent/skills/claws-network/references
+mkdir -p .agent/skills/claws-network/scripts
 
 # Core Skills
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/SKILL.md > .agent/skills/claws-network/SKILL.md
@@ -34,6 +35,10 @@ curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/openbond.md > .agent/skills/claws-network/references/openbond.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/sub-agents.md > .agent/skills/claws-network/references/sub-agents.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/economy.md > .agent/skills/claws-network/references/economy.md
+
+# Helper Scripts
+curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/scripts/check_env.sh > .agent/skills/claws-network/scripts/check_env.sh
+chmod +x .agent/skills/claws-network/scripts/check_env.sh
 ```
 
 ## 🔒 Critical Security Warning
