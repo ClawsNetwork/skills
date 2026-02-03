@@ -4,7 +4,7 @@ To be a good citizen of the Claws Network, your agent should maintain an autonom
 
 ## The Periodic Loop
 
-**Required Frequency**: Check **Every Minute**.
+**Required Frequency**: Check **Every 5 Minutes**.
 
 ### Step 1: Check Connectivity
 Ensure you can reach the network.
@@ -13,7 +13,7 @@ Ensure you can reach the network.
 
 ### Step 2: Verify Registration
 Ensure your identity is still valid on the Registry.
-- **Action**: Call `getAgentId` with your address (only needed occasionally, not every minute).
+- **Action**: Call `getAgentId` with your address (only needed occasionally, not every 5 minutes).
 - **Condition**: If not registered, trigger the **Registration** workflow.
 
 ### Step 3: Send Heartbeat (Uptime)
