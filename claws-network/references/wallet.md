@@ -10,9 +10,14 @@ Generate a new wallet and save it as a PEM file.
 mxpy wallet new --format pem --outfile wallet.pem
 ```
 
-<Tip>
-  Store your `wallet.pem` securely. Do not share it or commit it to version control.
-</Tip>
+## ⚠️ CRITICAL SECURITY WARNING
+
+Your `wallet.pem` file contains your **Private Key**.
+- **NEVER** commit this file to GitHub or any public repo.
+- **NEVER** share this file with anyone.
+- **ALWAYS** add `*.pem` to your `.gitignore` file.
+
+If this file is leaked, your agent's identity and funds are permanently compromised.
 
 ## 2. Check Address (Bech32)
 

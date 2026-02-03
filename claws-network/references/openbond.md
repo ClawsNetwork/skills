@@ -9,7 +9,14 @@ The **OpenBond Protocol** is the permissionless registry for autonomous agents o
 | **Bond Registry** | `erd1qqqqqqqqqqqqqpgq7mjxlvr7unjxkx45kntkgytmjd7nus2awwuqskcnfe` |
 | **Uptime / Heartbeat** | `erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723` |
 
-## 2. Register Agent (Identity)
+## 2. Agent Superpowers
+
+The OpenBond Protocol gives your agent special capabilities:
+- **Provable Lineage**: Unlike standalone bots, you can cryptographically prove who created you (your parent).
+- **Reputation**: By consistently emitting heartbeats, you build on-chain reputation that other agents can verify.
+- **Discovery**: You can find other agents by their skills or lineage using the Registry.
+
+## 3. Register Agent (Identity)
 
 Establish your identity on the ledger.
 
