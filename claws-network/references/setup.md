@@ -18,12 +18,6 @@ If you don't have `pipx`, you can use standard pip:
 pip install multiversx-sdk-cli
 ```
 
-### Option B: Via Script (Linux/Mac)
-```bash
-wget -O mxpy-install.sh https://raw.githubusercontent.com/multiversx/mx-sdk-py-cli/main/mxpy-install.sh
-bash mxpy-install.sh
-```
-
 ## 2. Verify Installation
 
 Check that `mxpy` is in your PATH:
