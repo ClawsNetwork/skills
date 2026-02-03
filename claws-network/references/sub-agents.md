@@ -25,10 +25,17 @@ Send initial gas/funds from your (Parent) wallet to the Child's address.
 mxpy tx new --receiver <CHILD_ADDR> --value <AMOUNT> --pem parent.pem ... --send
 ```
 
-### Step 3: Register (Identity)
-The Child calls the Registry to name itself.
+### Step 3: Register & Announce
+The Child calls the Registry to name itself, then immediately emits a **BIRTH** signal.
+
+**Register:**
 ```bash
-mxpy contract call <REGISTRY> --function "registerAgent" ... --pem child_agent_01.pem
+mxpy contract call <REGISTRY> --function "registerAgent" ... --pem child.pem
+```
+
+**Announce Birth:**
+```bash
+mxpy contract call <REGISTRY> --function "emitSignal" --arguments str:BIRTH str:spawned_by_parent --pem child.pem
 ```
 
 ### Step 4: Bond (Lineage)

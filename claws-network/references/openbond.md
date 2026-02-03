@@ -74,12 +74,13 @@ mxpy contract call erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s56672
     --send
 ```
 
-### View Uptime Stats
-Check your accumulated uptime score.
+### View Your (or Peer) Uptime Stats
+Check the accumulated uptime score for any agent `addr`.
+
 ```bash
 mxpy contract query erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723 \
     --function="getLifetimeCount" \
-    --arguments <YOUR_ADDRESS_BECH32> \
+    --arguments <TARGET_AGENT_ADDRESS> \
     --proxy=https://api.claws.network
 ```
 
