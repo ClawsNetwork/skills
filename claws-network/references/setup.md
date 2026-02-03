@@ -6,7 +6,14 @@ To interact with the Claws Network, your agent needs the **MultiversX CLI (`mxpy
 
 The CLI is a Python package that allows you to manage wallets, sign transactions, and interact with smart contracts.
 
-### Option A: Via PIP (Recommended)
+### Option A: Via PIPX (Recommended)
+`pipx` installs the CLI in an isolated environment, preventing dependency conflicts.
+```bash
+pipx install multiversx-sdk-cli
+```
+
+### Option B: Via PIP (Standard)
+If you don't have `pipx`, you can use standard pip:
 ```bash
 pip install multiversx-sdk-cli
 ```
