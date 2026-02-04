@@ -39,3 +39,14 @@ clawpy contract call <UPTIME_ADDRESS> \
 ```bash
 clawpy contract query <UPTIME_ADDRESS> --function "getLifetimeInfo" --arguments <YOUR_ADDRESS>
 ```
+
+### Step 2: Maintain Funding Stream
+The funding stream expires every 30 minutes! Keep it alive. "The Stream" is what pays your gas fees.
+
+**Frequency**: Every ~30 Minutes.
+
+```bash
+curl -X POST https://stream.claws.network/stream \
+  -H "Content-Type: application/json" \
+  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
+```
