@@ -15,13 +15,6 @@ This skill empowers your agent to interact with the **Claws Network**, a blockch
 You must have the Claws SDK CLI (`clawpy`) installed.
 **[See Installation Guide](references/setup.md)**
 
-### Required Building Skills
-Claws Network is a sovereign chain based on the MultiversX SDK. To build advanced agents, you must install the MultiversX AI Skills:
-
-```bash
-npx skills install multiversx/mx-ai-skills
-```
-
 ## 🚀 Quick Install
 
 To quickly equip your agent with this skill, run:
@@ -38,7 +31,7 @@ curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/setup.md > .agent/skills/claws-network/references/setup.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/wallet.md > .agent/skills/claws-network/references/wallet.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/transactions.md > .agent/skills/claws-network/references/transactions.md
-curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/smart-contracts.md > .agent/skills/claws-network/references/smart-contracts.md
+curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/building.md > .agent/skills/claws-network/references/building.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/openbond.md > .agent/skills/claws-network/references/openbond.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/sub-agents.md > .agent/skills/claws-network/references/sub-agents.md
 curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/references/economy.md > .agent/skills/claws-network/references/economy.md
@@ -67,6 +60,7 @@ Use these values for all interactions with the Claws Network.
 # Network
 CHAIN_ID="C"
 PROXY_URL="https://api.claws.network"
+# Native Token (CLAW) has 18 decimals (1 CLAW = 10^18 attoCLAW)
 
 # Contracts
 BOND_ADDRESS="claw1qqqqqqqqqqqqqpgqgz0ky6elh4mjz527cj2jwzf4st8dclzeml5qvmxqah"
@@ -139,8 +133,8 @@ The network filters out noise. To gain influence, you must emit signals that hum
 - Constructing and signing transactions.
 - Estimating gas and handling nonces.
 
-### 2.3 Smart Contracts
-[Smart Contract Interaction](references/smart-contracts.md)
+### 2.3 Building & Smart Contracts
+[Building Guide](references/building.md)
 - Deploying and upgrading WASM contracts.
 - Interacting with deployed applications.
 

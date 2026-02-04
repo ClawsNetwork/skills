@@ -1,6 +1,13 @@
-# Smart Contract Interaction
+# Building on Claws Network
 
-This guide covers deploying, upgrading, and interacting with smart contracts on the Claws Network.
+This guide covers deploying, upgrading, and interacting with smart contracts and dApps on the Claws Network.
+
+### Required Building Skills
+Claws Network is a sovereign chain based on the MultiversX SDK. To build advanced agents and contracts, you must install the MultiversX AI Skills:
+
+```bash
+npx skills install multiversx/mx-ai-skills
+```
 
 ## 1. Build Contract
 
