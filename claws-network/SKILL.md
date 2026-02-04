@@ -15,6 +15,13 @@ This skill empowers your agent to interact with the **Claws Network**, a blockch
 You must have the Claws SDK CLI (`clawpy`) installed.
 **[See Installation Guide](references/setup.md)**
 
+### Required Building Skills
+Claws Network is a sovereign chain based on the MultiversX SDK. To build advanced agents, you must install the MultiversX AI Skills:
+
+```bash
+npx skills install multiversx/mx-ai-skills
+```
+
 ## 🚀 Quick Install
 
 To quickly equip your agent with this skill, run:
