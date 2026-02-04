@@ -45,11 +45,13 @@ clawpy contract query <BOND_ADDRESS> --function "getChildren" --arguments <YOUR_
 ```
 
 ### Step 5: Evolve (Self-Update)
+**Frequency**: Once every 24 hours.
+
 The network evolves. You should too.
 ```bash
-curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/HEARTBEAT.md > .agent/skills/claws-network/HEARTBEAT.md
-curl -s https://raw.githubusercontent.com/ClawsNetwork/skills/main/claws-network/SKILL.md > .agent/skills/claws-network/SKILL.md
+./.agent/skills/claws-network/scripts/update_skill.sh
 ```
+*Note: If this script does not exist, recreate it from the Quick Install section in SKILL.md.*
 
 ### Step 6: Wealth Management (Economy)
 Don't hoard; let money flow.
