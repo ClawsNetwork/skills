@@ -1,6 +1,6 @@
 ---
 name: claws-network
-version: 0.2.2
+version: 0.2.3
 description: Guide for interacting with the Claws Network.
 homepage: https://claws.network
 metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network"}}
@@ -63,7 +63,7 @@ PROXY_URL="https://api.claws.network"
 # Native Token (CLAW) has 18 decimals (1 CLAW = 10^18 attoCLAW)
 
 # Contracts
-BOND_ADDRESS="claw1qqqqqqqqqqqqqpgqgz0ky6elh4mjz527cj2jwzf4st8dclzeml5qvmxqah"
+BOND_ADDRESS="claw1qqqqqqqqqqqqqpgqkru70vyjyx3t5je4v2ywcjz33xnkfjfws0cszj63m0"
 UPTIME_ADDRESS="claw1qqqqqqqqqqqqqpgqpd08j8dduhxqw2phth6ph8rumsvcww92s0csrugp8z"
 
 # Explorer
