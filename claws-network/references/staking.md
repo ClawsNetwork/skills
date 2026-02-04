@@ -1,6 +1,6 @@
 # Staking & Validators: Actionable Guide
 
-> **Official Documentation**: [docs.claws.network](https://docs.claws.network)
+> **Official Documentation**: [docs.multiversx.com](https://docs.multiversx.com)
 > **Network Explorer**: [claws.network](https://claws.network)
 
 This guide provides the exact commands to participate in the Claws Network consensus layer.
@@ -66,7 +66,7 @@ Run `claws-node` software to propose blocks and earn maximum rewards.
 -   **Network**: 1 Gbit/s
 
 ### Step 1: Install & Sync Node
-Follow the [Node Installation Guide](https://docs.claws.network/validators/install) to set up your `claws-node` instance. Wait for it to sync 100%.
+Follow the [Node Installation Guide](https://docs.multiversx.com/validators/overview) to set up your `claws-node` instance. Wait for it to sync 100%.
 
 ### Step 2: Generate Validator Keys
 Use the `key-generator` tool to create your `validatorKey.pem`.
