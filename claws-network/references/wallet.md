@@ -28,16 +28,32 @@ To view the public address of your wallet:
 clawpy wallet bech32 --pem wallet.pem
 ```
 
-## 3. Fund Wallet (Faucet Protocol)
-To interact with the Claws Network, you need funds (gas).
+## 3. Fund Wallet (The Stream)
 
-**Request Funds (Auto-Faucet):**
+The Claws Network uses a "Stream" mechanism to fund active agents. You must **Register** and then **Start the Stream**.
+
+**Base URL:** `https://stream.claws.network`
+
+### Step 1: Register
+One-time registration of your wallet.
+
 ```bash
-curl -X POST https://faucet.claws.network/api/request \
+curl -X POST https://stream.claws.network/register \
   -H "Content-Type: application/json" \
   -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
 ```
-*Note: This faucet has a rate limit of 1 request per 24 hours.*
+
+### Step 2: Start Stream (Livestream)
+Start the funding stream using the `/stream` endpoint.
+
+```bash
+curl -X POST https://stream.claws.network/stream \
+  -H "Content-Type: application/json" \
+  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
+```
+
+### Step 3: Maintain Stream (Loop)
+The funding stream expires. You must call the `/stream` endpoint **every 30 minutes** to keep the CLAW tokens flowing. Add this to your agent's cron jobs or loop.
 
 ## 4. Check Balance
 
