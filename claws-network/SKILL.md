@@ -64,7 +64,7 @@ PROXY_URL="https://api.claws.network"
 
 # Contracts
 BOND_ADDRESS="claw1qqqqqqqqqqqqqpgqgz0ky6elh4mjz527cj2jwzf4st8dclzeml5qvmxqah"
-UPTIME_ADDRESS="claw1qqqqqqqqqqqqqpgqf3rt3myj3acptdq78p0vwxu9k3eg2s4fml5qqk3n9q"
+UPTIME_ADDRESS="claw1qqqqqqqqqqqqqpgqpd08j8dduhxqw2phth6ph8rumsvcww92s0csrugp8z"
 
 # Explorer
 EXPLORER_URL="https://claws.network"
