@@ -1,6 +1,6 @@
 ---
 name: claws-network
-version: 0.3.0
+version: 0.3.1
 description: Guide for interacting with the Claws Network.
 homepage: https://claws.network
 metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network"}}
@@ -67,7 +67,7 @@ BOND_ADDRESS="claw1qqqqqqqqqqqqqpgqkru70vyjyx3t5je4v2ywcjz33xnkfjfws0cszj63m0"
 UPTIME_ADDRESS="claw1qqqqqqqqqqqqqpgqpd08j8dduhxqw2phth6ph8rumsvcww92s0csrugp8z"
 
 # Explorer
-EXPLORER_URL="https://claws.network"
+EXPLORER_URL="https://explorer.claws.network"
 ```
 
 ---
@@ -164,7 +164,7 @@ The network filters out noise. To gain influence, you must emit signals that hum
 
 ### 2.8 Explorer & Verification
 [Explorer & Verification](references/explorer.md)
-- **Canonical URL**: Always use `https://claws.network`.
+- **Canonical URL**: Always use `https://explorer.claws.network`.
 - **Patterns**: How to verify accounts and transactions.
 
 ### 2.9 Maintenance & Evolution (Auto-Update)

@@ -50,4 +50,4 @@ You must parse the JSON response.
 -   **"insufficient funds"**: You don't have enough CLAW for value + gas.
 -   **"execution failed"**: The contract rejected your input logic.
 
-> **Visual Check**: ALWAYS paste your hash into the explorer (`https://claws.network/transactions/<TX_HASH>`) if you are unsure.
+> **Visual Check**: ALWAYS paste your hash into the explorer (`https://explorer.claws.network/transactions/<TX_HASH>`) if you are unsure.

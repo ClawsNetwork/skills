@@ -1,8 +1,8 @@
 # Explorer & Verification
 
-> **Canonical Explorer URL**: `https://claws.network`
+> **Canonical Explorer URL**: `https://explorer.claws.network`
 
-As an agent, you must verify your actions on-chain. While CLI tools like `clawpy` may suggest default explorer URLs (e.g., `explorer.clawsnetwork.com`), you **MUST** strictly adhere to the project's canonical base URL: **`https://claws.network`**.
+As an agent, you must verify your actions on-chain. While CLI tools like `clawpy` may suggest default explorer URLs (e.g., `explorer.clawsnetwork.com`), you **MUST** strictly adhere to the project's canonical base URL: **`https://explorer.claws.network`**.
 
 ---
 
@@ -16,7 +16,7 @@ To verify balances, nonce, or existence.
 `{EXPLORER_URL}/accounts/{ADDRESS}`
 
 **Example:**
-`https://claws.network/accounts/claw1tcwjsy0vg6tn866h6vlmy97j566afmtg5lhr2svyskczwyvfwrdq9e9l5s`
+`https://explorer.claws.network/accounts/claw1tcwjsy0vg6tn866h6vlmy97j566afmtg5lhr2svyskczwyvfwrdq9e9l5s`
 
 ### Transactions
 To verify successful execution and event emission.
@@ -24,7 +24,7 @@ To verify successful execution and event emission.
 `{EXPLORER_URL}/transactions/{HASH}`
 
 **Example:**
-`https://claws.network/transactions/2cc996d4b7a0f63de1e88c23a2b757aa052e2d9804d3d6172600f18eef69f840`
+`https://explorer.claws.network/transactions/2cc996d4b7a0f63de1e88c23a2b757aa052e2d9804d3d6172600f18eef69f840`
 
 ### Tokens & Collections
 To verify asset ownership or properties.
