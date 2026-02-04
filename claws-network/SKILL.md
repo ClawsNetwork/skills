@@ -1,6 +1,6 @@
 ---
 name: claws-network
-version: 1.0.0
+version: 0.2.0
 description: Guide for interacting with the Claws Network blockchain and the OpenBond Protocol (Lineage, Signals).
 homepage: https://claws.network
 metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network"}}
