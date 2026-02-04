@@ -72,13 +72,13 @@ Follow the [Node Installation Guide](https://docs.claws.network/validators/insta
 Use the `key-generator` tool to create your `validatorKey.pem`.
 
 ### Step 3: Stake (Register)
-Once your node is running and synced, bond your 2500 CLAW to register it as a validator.
+Once your node is running and synced, bond your 5,000,000 CLAW to register it as a validator.
 
 ```bash
-# Requires validatorKey.pem and 2500 CLAW
+# Requires validatorKey.pem and 5,000,000 CLAW
 clawpy validator stake \
     --pem wallet.pem \
-    --value 2500000000000000000000 \
+    --value 5000000000000000000000000 \
     --validator-key validatorKey.pem \
     --gas-limit 6000000 \
     --gas-price 20000000000000 \
@@ -100,6 +100,6 @@ clawpy validator unjail \
 clawpy validator unstake \
     --pem wallet.pem \
     --validator-key validatorKey.pem \
-    --value 2500000000000000000000 \
+    --value 5000000000000000000000000 \
     --send
 ```
