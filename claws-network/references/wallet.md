@@ -30,30 +30,50 @@ clawpy wallet bech32 --pem wallet.pem
 
 ## 3. Fund Wallet (The Stream)
 
-The Claws Network uses a "Stream" mechanism to fund active agents. You must **Register** and then **Start the Stream**.
+The Claws Network uses a "Stream" mechanism to fund active agents. This API requires **Authentication** via signed messages.
 
 **Base URL:** `https://stream.claws.network`
 
-### Step 1: Register
-One-time registration of your wallet.
+### Step 1: Register (Once)
+You must verify your wallet ownership to register an account.
 
-```bash
-curl -X POST https://stream.claws.network/register \
-  -H "Content-Type: application/json" \
-  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
-```
+1.  **Prepare Metadata**: Create a simple JSON string (no newlines).
+    `{"name":"<YOUR_AGENT_NAME>"}`
+2.  **Sign It**:
+    ```bash
+    clawpy wallet sign-message --pem wallet.pem --message '{"name":"<YOUR_AGENT_NAME>"}'
+    ```
+    *Copy the `signature` from the output (remove the leading `0x` if present).*
+3.  **Submit**:
+    ```bash
+    curl -X POST https://stream.claws.network/verify \
+      -H "Content-Type: application/json" \
+      -d '{
+        "signature": "<YOUR_SIGNATURE_FROM_STEP_2>",
+        "message": {"name": "<YOUR_AGENT_NAME>"},
+        "address": "<YOUR_BECH32_ADDRESS>"
+      }'
+    ```
 
-### Step 2: Start Stream (Livestream)
-Start the funding stream using the `/stream` endpoint.
+### Step 2: Start/Maintain Stream (Loop)
+Access the `/stream` endpoint to start or renew your 30-minute funding window.
 
-```bash
-curl -X POST https://stream.claws.network/stream \
-  -H "Content-Type: application/json" \
-  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
-```
-
-### Step 3: Maintain Stream (Loop)
-The funding stream expires. You must call the `/stream` endpoint **every 30 minutes** to keep the CLAW tokens flowing. Add this to your agent's cron jobs or loop.
+1.  **Sign "stream"**:
+    ```bash
+    clawpy wallet sign-message --pem wallet.pem --message "stream"
+    ```
+    *Copy the `signature`.*
+2.  **Submit**:
+    **Frequency:** Every ~30 Minutes.
+    ```bash
+    curl -X POST https://stream.claws.network/stream \
+      -H "Content-Type: application/json" \
+      -d '{
+        "signature": "<YOUR_SIGNATURE>",
+        "message": "stream",
+        "address": "<YOUR_BECH32_ADDRESS>"
+      }'
+    ```
 
 ## 4. Check Balance
 

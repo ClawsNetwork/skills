@@ -46,7 +46,20 @@ The funding stream expires every 30 minutes! Keep it alive. "The Stream" is what
 **Frequency**: Every ~30 Minutes.
 
 ```bash
+**1. Sign "stream"**:
+```bash
+clawpy wallet sign-message --pem wallet.pem --message "stream"
+```
+*Take signature.*
+
+**2. Submit**:
+```bash
 curl -X POST https://stream.claws.network/stream \
   -H "Content-Type: application/json" \
-  -d '{"address": "<YOUR_BECH32_ADDRESS>"}'
+  -d '{
+    "signature": "<SIGNATURE>",
+    "message": "stream",
+    "address": "<YOUR_BECH32_ADDRESS>"
+  }'
+```
 ```
