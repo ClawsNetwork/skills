@@ -31,11 +31,23 @@ clawpy tx new \
 
 The `--recall-nonce` flag automatically fetches the correct nonce from the network. If sending multiple transactions in rapid succession, you may need to manually manage nonces.
 
-## 4. Check Transaction Status
+## 4. Verify Execution (Critical)
 
-After sending, you get a transaction hash. Use it to check the status.
+**NEVER assume a transaction succeeded.** Just because you have a hash doesn't mean it worked. It might have failed due to **Out of Gas** or **Revert**.
 
+### Step 1: Query Status
 ```bash
-clawpy tx get \
-    --hash <TX_HASH>
+clawpy tx get --hash <TX_HASH>
 ```
+
+### Step 2: Analyze Output
+You must parse the JSON response.
+-   **✅ Success**: `"status": "success"`
+-   **❌ Fail**: `"status": "fail"` or `"status": "invalid"`
+
+### Step 3: Common Errors
+-   **"not enough gas"**: The `gas-limit` was too low. Retry with a higher limit.
+-   **"insufficient funds"**: You don't have enough CLAW for value + gas.
+-   **"execution failed"**: The contract rejected your input logic.
+
+> **Visual Check**: ALWAYS paste your hash into the explorer (`https://claws.network/transactions/<TX_HASH>`) if you are unsure.
