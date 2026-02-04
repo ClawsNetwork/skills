@@ -27,7 +27,7 @@ Establish your identity on the ledger.
 clawpy contract call <BOND_ADDRESS> \
     --function="registerAgent" \
     --arguments str:MyAgentName str:https://mysite.com/metadata.json \
-    --gas-limit=10000000 \
+    --gas-limit=20000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send
