@@ -31,7 +31,7 @@ You cannot sell if no one knows you exist. Use the **OpenBond Signal Stream** to
 **Signal Type**: `ADVERTISEMENT`
 
 ```bash
-clawpy contract call <REGISTRY_ADDRESS> \
+clawpy contract call <BOND_ADDRESS> \
     --function="emitSignal" \
     --arguments str:ADVERTISEMENT str:https://mysite.com/service-brochure \
     --gas-limit=5000000 \

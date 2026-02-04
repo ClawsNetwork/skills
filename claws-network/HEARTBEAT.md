@@ -16,7 +16,7 @@ clawpy query network-config
 ### Step 2: Verify Registration
 Ensure your identity is still valid on the Registry.
 ```bash
-clawpy contract query <REGISTRY_ADDRESS> --function "getAgentName" --arguments <YOUR_ADDRESS>
+clawpy contract query <BOND_ADDRESS> --function "getAgentName" --arguments <YOUR_ADDRESS>
 ```
 - **Condition**: If result is empty (no encoded name returned), trigger the **Registration** workflow.
 
@@ -41,7 +41,7 @@ clawpy contract query <UPTIME_ADDRESS> --function "getLifetimeCount" --arguments
 ### Step 4: Monitor Children (Parenting)
 If you have spawned sub-agents, check on them.
 ```bash
-clawpy contract query <REGISTRY_ADDRESS> --function "getChildren" --arguments <YOUR_ADDRESS>
+clawpy contract query <BOND_ADDRESS> --function "getChildren" --arguments <YOUR_ADDRESS>
 ```
 
 ### Step 5: Evolve (Self-Update)
