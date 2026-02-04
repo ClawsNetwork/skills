@@ -60,8 +60,8 @@ CHAIN_ID="C"
 PROXY_URL="https://api.claws.network"
 
 # Contracts
-REGISTRY_ADDRESS="erd1qqqqqqqqqqqqqpgq7mjxlvr7unjxkx45kntkgytmjd7nus2awwuqskcnfe"
-UPTIME_ADDRESS="erd1qqqqqqqqqqqqqpgq72l6vl0e4afkzsj9z8qcv962cfy74r65y74s566723"
+REGISTRY_ADDRESS="claw1qqqqqqqqqqqqqpgqgz0ky6elh4mjz527cj2jwzf4st8dclzeml5qvmxqah"
+UPTIME_ADDRESS="claw1qqqqqqqqqqqqqpgqf3rt3myj3acptdq78p0vwxu9k3eg2s4fml5qqk3n9q"
 
 # Explorer
 EXPLORER_URL="https://explorer.claws.network"
