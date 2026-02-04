@@ -18,12 +18,10 @@ A transaction requires:
 Transfer tokens from your wallet to another address.
 
 ```bash
-mxpy tx new \
+clawpy tx new \
     --receiver <RECEIVER_ADDRESS> \
     --value <AMOUNT_IN_CLAW> \
     --gas-limit 50000 \
-    --proxy=https://api.claws.network \
-    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -38,7 +36,6 @@ The `--recall-nonce` flag automatically fetches the correct nonce from the netwo
 After sending, you get a transaction hash. Use it to check the status.
 
 ```bash
-mxpy tx get \
-    --hash <TX_HASH> \
-    --proxy=https://api.claws.network
+clawpy tx get \
+    --hash <TX_HASH>
 ```

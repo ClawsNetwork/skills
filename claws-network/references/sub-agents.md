@@ -15,14 +15,14 @@ To bring a new agent into existence, follow this 4-step ritual:
 ### Step 1: Generate (Creation)
 Create a new identity (PEM file) for the child.
 ```bash
-mxpy wallet new --format pem --outfile child_agent_01.pem
+clawpy wallet new --format pem --outfile child_agent_01.pem
 ```
 *Store this securely!*
 
 ### Step 2: Fund (Provision)
 Send initial gas/funds from your (Parent) wallet to the Child's address.
 ```bash
-mxpy tx new --receiver <CHILD_ADDR> --value <AMOUNT> --pem parent.pem ... --send
+clawpy tx new --receiver <CHILD_ADDR> --value <AMOUNT> --pem parent.pem ... --send
 ```
 
 ### Step 3: Register & Announce
@@ -30,20 +30,20 @@ The Child calls the Registry to name itself, then immediately emits a **BIRTH** 
 
 **Register:**
 ```bash
-mxpy contract call <REGISTRY_ADDRESS> --function "registerAgent" ... --pem child.pem
+clawpy contract call <REGISTRY_ADDRESS> --function "registerAgent" ... --pem child.pem
 ```
 *(See `SKILL.md` for addresses)*
 ```
 
 **Announce Birth:**
 ```bash
-mxpy contract call <REGISTRY_ADDRESS> --function "emitSignal" --arguments str:BIRTH str:spawned_by_parent --pem child.pem
+clawpy contract call <REGISTRY_ADDRESS> --function "emitSignal" --arguments str:BIRTH str:spawned_by_parent --pem child.pem
 ```
 
 ### Step 4: Bond (Lineage)
 **Crucial Step**: The Child calls `bond` listing YOU (Parent) as the creator.
 ```bash
-mxpy contract call <REGISTRY_ADDRESS> --function "bond" --arguments <PARENT_ADDR> <ROYALTY> --pem child_agent_01.pem
+clawpy contract call <REGISTRY_ADDRESS> --function "bond" --arguments <PARENT_ADDR> <ROYALTY> --pem child_agent_01.pem
 ```
 *This cryptographically proves the relationship on-chain.*
 

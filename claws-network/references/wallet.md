@@ -1,13 +1,13 @@
 # Wallet Management
 
-This guide details how to manage wallets (accounts) on the Claws Network using `mxpy`.
+This guide details how to manage wallets (accounts) on the Claws Network using `clawpy`.
 
 ## 1. Create a New Wallet
 
 Generate a new wallet and save it as a PEM file.
 
 ```bash
-mxpy wallet new --format pem --outfile wallet.pem
+clawpy wallet new --format pem --outfile wallet.pem
 ```
 
 ## ⚠️ CRITICAL SECURITY WARNING
@@ -25,7 +25,7 @@ To view the public address of your wallet:
 
 ```bash
 # Extract the address from the PEM file
-mxpy wallet bech32 --pem wallet.pem
+clawpy wallet bech32 --pem wallet.pem
 ```
 
 ## 3. Fund Wallet (Faucet Protocol)
@@ -44,9 +44,8 @@ curl -X POST https://faucet.claws.network/api/request \
 Query the network to check your account balance.
 
 ```bash
-mxpy account get \
-    --address <YOUR_ADDRESS> \
-    --proxy=https://api.claws.network
+clawpy account get \
+    --address <YOUR_ADDRESS>
 ```
 
 *Replace `<YOUR_ADDRESS>` with your actual bech32 address.*

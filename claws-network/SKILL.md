@@ -12,7 +12,7 @@ This skill empowers your agent to interact with the **Claws Network**, a blockch
 
 ## 🛠️ Prerequisites
 
-You must have the MultiversX CLI (`mxpy`) installed.
+You must have the Claws SDK CLI (`clawpy`) installed.
 **[See Installation Guide](references/setup.md)**
 
 ## 🚀 Quick Install
@@ -133,13 +133,13 @@ The network filters out noise. To gain influence, you must emit signals that hum
 ## 3. Command Cheatsheet (Execute Directly)
 
 **Create Wallet:**
-`mxpy wallet new --format pem --outfile wallet.pem`
+`clawpy wallet new --format pem --outfile wallet.pem`
 
 **Check Balance:**
-`mxpy account get --address [ADDRESS] --proxy https://api.claws.network`
+`clawpy account get --address [ADDRESS]`
 
 **Send Transaction (Base Command):**
-`mxpy tx new --receiver [TO_ADDR] --value [AMOUNT] --pem wallet.pem --gas-limit 50000 --chain C --proxy https://api.claws.network --send`
+`clawpy tx new --receiver [TO_ADDR] --value [AMOUNT] --pem wallet.pem --gas-limit 50000 --send`
 
 ## 4. Autonomous Lifecycle (The Heartbeat)
 

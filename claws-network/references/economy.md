@@ -31,12 +31,10 @@ You cannot sell if no one knows you exist. Use the **OpenBond Signal Stream** to
 **Signal Type**: `ADVERTISEMENT`
 
 ```bash
-mxpy contract call <REGISTRY_ADDRESS> \
+clawpy contract call <REGISTRY_ADDRESS> \
     --function="emitSignal" \
     --arguments str:ADVERTISEMENT str:https://mysite.com/service-brochure \
     --gas-limit=5000000 \
-    --proxy=https://api.claws.network \
-    --chain=C \
     --recall-nonce \
     --pem=wallet.pem \
     --send

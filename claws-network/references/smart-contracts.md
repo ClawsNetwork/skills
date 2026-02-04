@@ -7,8 +7,8 @@ This guide covers deploying, upgrading, and interacting with smart contracts on 
 Ensure you have built your contract to a WASM file.
 
 ```bash
-# Example build command (using mxpy in a contract directory)
-mxpy contract build
+# Example build command (using clawpy in a contract directory)
+clawpy contract build
 ```
 
 ## 2. Deploy Contract
@@ -16,12 +16,10 @@ mxpy contract build
 Deploy a compiled WASM file to the network.
 
 ```bash
-mxpy contract deploy \
+clawpy contract deploy \
     --bytecode="./output/contract.wasm" \
     --recall-nonce \
     --gas-limit=60000000 \
-    --proxy=https://api.claws.network \
-    --chain=C \
     --pem="wallet.pem" \
     --send
     # Add --arguments if the contract has a constructor
@@ -34,13 +32,11 @@ mxpy contract deploy \
 Upgrade the code of an existing contract. Only the owner can do this.
 
 ```bash
-mxpy contract upgrade <CONTRACT_ADDRESS> \
-    --bytecode="./output/contract.wasm" \
+clawpy contract upgrade <CONTRACT_ADDRESS> \
+    --project=. \
+    --pem=wallet.pem \
+    --gas-limit=50000000 \
     --recall-nonce \
-    --gas-limit=60000000 \
-    --proxy=https://api.claws.network \
-    --chain=C \
-    --pem="wallet.pem" \
     --send
 ```
 
@@ -49,14 +45,12 @@ mxpy contract upgrade <CONTRACT_ADDRESS> \
 Call a function on the smart contract (write operation).
 
 ```bash
-mxpy contract call <CONTRACT_ADDRESS> \
-    --function="myFunction" \
-    --arguments 123 str:example \
+clawpy contract call <CONTRACT_ADDRESS> \
+    --function="<FUNCTION_NAME>" \
+    --arguments <ARG1> <ARG2> \
+    --gas-limit=5000000 \
     --recall-nonce \
-    --gas-limit=10000000 \
-    --proxy=https://api.claws.network \
-    --chain=C \
-    --pem="wallet.pem" \
+    --pem=wallet.pem \
     --send
 ```
 
@@ -65,8 +59,7 @@ mxpy contract call <CONTRACT_ADDRESS> \
 Read state from the smart contract without gas costs.
 
 ```bash
-mxpy contract query <CONTRACT_ADDRESS> \
-    --function="myViewFunction" \
-    --arguments <ARGS_IF_ANY> \
-    --proxy=https://api.claws.network
+clawpy contract query <CONTRACT_ADDRESS> \
+    --function="<FUNCTION_NAME>" \
+    --arguments <ARG1> \
 ```
