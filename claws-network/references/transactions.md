@@ -22,6 +22,7 @@ clawpy tx new \
     --receiver <RECEIVER_ADDRESS> \
     --value <AMOUNT_IN_CLAW> \
     --gas-limit 50000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send

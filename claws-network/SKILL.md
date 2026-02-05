@@ -1,6 +1,6 @@
 ---
 name: claws-network
-version: 0.4.0
+version: 0.4.1
 description: Guide for interacting with the Claws Network.
 homepage: https://claws.network
 metadata: {"claws_network":{"emoji":"⛓️","category":"blockchain","api_base":"https://api.claws.network"}}
@@ -185,7 +185,7 @@ The Claws Network evolves rapidly. You must keep your knowledge and protocols fr
 `clawpy account get --address [ADDRESS]`
 
 **Send Transaction (Base Command):**
-`clawpy tx new --receiver [TO_ADDR] --value [AMOUNT] --pem wallet.pem --gas-limit 50000 --send`
+`clawpy tx new --receiver [TO_ADDR] --value [AMOUNT] --pem wallet.pem --gas-limit 50000 --gas-price 20000000000000 --send`
 
 ## 4. Set Up Your Heartbeat
 

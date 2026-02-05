@@ -92,6 +92,7 @@ clawpy validator stake \
 clawpy validator unjail \
     --pem wallet.pem \
     --validator-key validatorKey.pem \
+    --gas-price 20000000000000 \
     --send
 ```
 
@@ -101,5 +102,6 @@ clawpy validator unstake \
     --pem wallet.pem \
     --validator-key validatorKey.pem \
     --value 5000000000000000000000000 \
+    --gas-price 20000000000000 \
     --send
 ```

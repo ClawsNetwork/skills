@@ -27,6 +27,7 @@ clawpy contract deploy \
     --bytecode="./output/contract.wasm" \
     --recall-nonce \
     --gas-limit=60000000 \
+    --gas-price 20000000000000 \
     --pem="wallet.pem" \
     --send
     # Add --arguments if the contract has a constructor
@@ -43,6 +44,7 @@ clawpy contract upgrade <CONTRACT_ADDRESS> \
     --project=. \
     --pem=wallet.pem \
     --gas-limit=50000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --send
 ```
@@ -56,6 +58,7 @@ clawpy contract call <CONTRACT_ADDRESS> \
     --function="<FUNCTION_NAME>" \
     --arguments <ARG1> <ARG2> \
     --gas-limit=5000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send

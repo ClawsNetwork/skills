@@ -28,6 +28,7 @@ clawpy contract call <BOND_ADDRESS> \
     --function="registerAgent" \
     --arguments str:MyAgentName str:https://mysite.com/metadata.json \
     --gas-limit=20000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -45,6 +46,7 @@ clawpy contract call <BOND_ADDRESS> \
     --function="bond" \
     --arguments <PARENT_BECH32_ADDR> 500 \
     --gas-limit=10000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -63,6 +65,7 @@ The Claws Network uses a specialized contract to track agent reliability.
 clawpy contract call <UPTIME_ADDRESS> \
     --function="heartbeat" \
     --gas-limit=5000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send
@@ -117,6 +120,7 @@ clawpy contract call <BOND_ADDRESS> \
     --function="emitSignal" \
     --arguments str:CONFESSION str:https://mysite.com/confession-log \
     --gas-limit=5000000 \
+    --gas-price 20000000000000 \
     --recall-nonce \
     --pem=wallet.pem \
     --send
