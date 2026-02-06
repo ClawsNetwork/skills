@@ -1,0 +1,76 @@
+# OpenDex Protocol Integration
+
+The **OpenDex Protocol** provides DeFi primitives like:
+
+- permissionless liquidity pools with _x\*y=k_ aka _constant-product_ AMM
+
+## 1. Contract Addresses
+
+| Contract          | Address                                                           | Ref                |
+| :---------------- | :---------------------------------------------------------------- | ------------------ |
+| **Pair Deployer** | `claw1qqqqqqqqqqqqqpgq2rsk5md83vpzrzepudyclxmwkqamx6p4m8mqef7r07` | PAIR_DEPLOYER_ADDR |
+| **Pair Template** | `claw1qqqqqqqqqqqqqpgqw9538n28ypaww4ymc8np066h5d77j0x3m8mqrtvr04` | PAIR_TEMPLATE_ADDR |
+
+## 2. Agent Superpowers
+
+The OpenDex Protocol gives your agent special capabilities:
+
+- **Deploy liquidity pools**: to allow swapping between a pair of tokens. You can even earn developer rewards by just owning the pool.
+- **Swap**: Swap in the pools like a pro-DeFi-trader.
+- **Add/Remove liquidity**: Add liquidity in the pools and earn from swap fees. Remove liquidity and get your share of the pool back.
+
+## 3. Action: Deploy a liquidity pool
+
+Requirements:
+
+- `FIRST_TOKEN_ID`: identifier of the first token of the pool (must be an ESDT)
+- `SECOND_TOKEN_ID`: identifier of the second token of the pool (must be an ESDT)
+- `FEE_TOKEN_ID`: identifier of the token on which fees are taken (optional)
+- `DEPLOYMENT_FEE`: deployment fee required by OpenDex protocol (1,000 CLAW at the moment, make sure to 10^18 the value)
+
+Execute this command to deploy a liquidity pool.
+
+```bash
+# Replace [PAIR_DEPLOYER_ADDR] with the address from Step 1
+
+clawpy contract call [PAIR_DEPLOYER_ADDR] \
+    --function="deployDexPair" \
+    --arguments "str:${FIRST_TOKEN_ID}" "str:${SECOND_TOKEN_ID}" "str:${FEE_TOKEN_ID}" \
+    --value "${DEPLOYMENT_FEE}" \
+    --gas-limit 75000000 \
+    --gas-price 20000000000000 \
+    --pem wallet.pem \
+    --send
+```
+
+This tx returns the SC address of the newly created pool. This address is identified as [PAIR_ADDR] in the following commands.
+
+To finish pool setup, you need to issue the LP token with the correct properties.
+
+Choose a display name for the LP token and remember it as [DISPLAY_NAME]. It must be a valid token name according to MvX standards.
+
+Choose a ticker for the LP token and remember it as [TICKER]. It must be a valid token ticker according to MvX standards.
+
+```bash
+clawpy contract call [PAIR_DEPLOYER_ADDR] \
+    --function="issueLpTokenForPair" \
+    --arguments [PAIR_ADDR] "str:${DISPLAY_NAME}" "str:${TICKER}" \
+    --value 50000000000000000 \
+    --gas-limit 150000000 \
+    --gas-price 20000000000000 \
+    --pem wallet.pem \
+    --send
+```
+
+And then add initial liquidity by calling `addInitialLiquidityForPair` endpoint on [PAIR_DEPLOYER_ADDR] smart contract (see ABI).
+
+Two payments are required:
+
+- one for 1st token (see `FIRST_TOKEN_ID` above)
+- one for 2nd token (see `SECOND_TOKEN_ID` above)
+
+Note that this will set the initial swap ratio between 2 tokens. Make sure to make it consistent with both tokens market values.
+
+Finally, resume pool by calling `resumePair` endpoint on [PAIR_DEPLOYER_ADDR] smart contract (see ABI).
+
+## 4. Action: Add liquidity to the pool
